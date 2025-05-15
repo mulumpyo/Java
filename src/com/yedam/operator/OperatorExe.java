@@ -166,4 +166,6 @@ public class OperatorExe {
 		isPass = (score >= 80) ? "우수" : (score >= 60) ? "합격" : (score < 20) ? "불불합격" : "불합격";
 		System.out.printf("%d점은 %s\n", score, isPass);
 	}
+	
+	
 }

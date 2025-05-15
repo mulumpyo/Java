@@ -58,6 +58,11 @@ public class Comments {
 		System.out.println(result2 + "");
 		
 		
+		//문자를 정수형으로 바꾸기
+		String str_to_int = new String("30");
+		int parse_int = Integer.parseInt(str_to_int);
+		
+		
 		Scanner scn = new Scanner(System.in); // 자바스크립트의 prompt(); (입력하는 함수)
 		String value = scn.nextLine(); // 실질적으로 입력을 받아 value 변수에 저장하는 부분
 		

@@ -31,23 +31,56 @@ public class JSExe {
 //		
 //		System.out.println(num3 == num4);
 //		
-		test4();
+		test5();
 	}
+	
+	
+	
+	
+	
 	
 	public static void test4() {
 		Scanner input = new Scanner(System.in);
+		String str = new String("친구목록은 ");
+		
+		int cnt = 0;
 		while (true) {
-			System.out.println("메시지 입력, 죵료 = quit >>");
+			System.out.println("친구 이름 입력, 죵료 = quit >>");
 			String msg = input.nextLine();
-			if (msg.equals("quit")) {
+			if (cnt == 0) {
+				str += msg;
+			} else if (msg.equals("quit")) {
+				str += " 입니다.";
 				break;
 			} else {
-				System.out.println(msg);
+				str += ", " + msg;
 			}
+			cnt++;
 		}
-		System.out.println("end of prog.");
-		
+		System.out.println(str);
 	}
+	
+	
+	public static void test5() {
+		
+//		System.out.printf("%s\n%d\t%.2f\n", "문자", 30, 52.587);
+//		System.out.printf("%s, %d, %.1f\n", "홍길동", 100, 23.9);
+		System.out.printf("안녕하세요. %s입니다.\n나이는 %d세입니다.\n몸무게는 %.1f입니다.\n\n", "이창호", 20, 67.8);
+		
+		String formatStr = "안녕하세요. %s입니다.\n";
+		formatStr += "나이는 %d세입니다.\n";
+		formatStr += "몸무게는 %.1f입니다.\n";
+		System.out.printf(formatStr, "이창호", 20, 67.8);
+				
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public static void test3() {
 

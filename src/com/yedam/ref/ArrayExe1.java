@@ -25,7 +25,7 @@ public class ArrayExe1 {
 		
 		avg /= scoreAry.length;
 		
-		System.out.printf("평균 : %.1f, 최대값 : %d\n",avg ,max);
+		System.out.printf("평균 : %.1f, 최대값 : %d\n", avg, max);
 	}
 
 	

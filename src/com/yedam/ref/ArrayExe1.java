@@ -4,28 +4,25 @@ public class ArrayExe1 {
 	public static void main(String[] args) {
 		
 		int[] scoreAry = new int[10];
+		double avg = 0;
+		int max = 0;
 		
 		System.out.print("{ ");
 		for (int i = 0; i < scoreAry.length; i++) {
 			scoreAry[i] = (int) (Math.random() * 91) + 10;
-			System.out.printf("%d ",scoreAry[i]); 
-		}
-		System.out.print("}\n");
-
-
-		double avg = 0;
-		int max = scoreAry[0];
-		for (int i = 0; i < scoreAry.length - 1; i++) {
+			System.out.printf("%d ",scoreAry[i]);
 			avg += scoreAry[i];
-			
-			if (max < scoreAry[i + 1]) {
-				max = scoreAry[i + 1];
+			if (max < scoreAry[i]) {
+				max = scoreAry[i];
 			}
 		}
+		
+		System.out.print("}\n");
 		
 		avg /= scoreAry.length;
 		
 		System.out.printf("평균 : %.1f, 최대값 : %d\n", avg, max);
+
 	}
 
 	

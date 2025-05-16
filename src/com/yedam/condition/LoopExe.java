@@ -10,6 +10,10 @@ public class LoopExe {
 	
 	public static void main(String[] args) {
 		
+		String WinMSG = new String("You win");
+		String LoseMSG = new String("You lost");
+		String SameMSG = new String("You lost");
+		
 		Scanner input = new Scanner(System.in);
 		
 		while(true) {
@@ -24,13 +28,13 @@ public class LoopExe {
 			} else {
 				System.out.println("사용자 : " + rspString(userRsp) + "\n" + "컴퓨터 : " + rspString(randomLsp) );
 				if (userRsp == randomLsp) {
-					System.out.println("Same");
+					System.out.println(SameMSG);
 				} else {
 					result = whoWin(userRsp, randomLsp);
 					if (result) {
-						System.out.println("You win");
+						System.out.println(WinMSG);
 					} else {
-						System.err.println("You lost");
+						System.err.println(LoseMSG);
 					}
 				}
 			}
